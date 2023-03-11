@@ -1,0 +1,76 @@
+h1 {
+  text-align: center;
+  font-family: Arial;
+  border-radius: 10px;
+  background: #22313f;
+  color: white;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 100%;
+}
+body {
+  background-color: #fff;
+}
+input {
+  display: none;
+}
+.b-content {
+  display: none;
+  transform: 1s;
+}
+.container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.bayan-item {
+  background: #22313f;
+  color: #fff;
+  font-family: arial;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.b-title {
+  padding: 7px 10px;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.b-title:hover {
+  background: rgba(52, 61, 95, 0.785);
+  border-radius: 7px;
+}
+.b-title::after {
+  content: "+ ";
+  font-size: 1.5em;
+  line-height: 0.8em;
+  transition: transform 0.3s;
+}
+.bayan :checked + .b-title {
+  background: rgba(75, 105, 214, 0.785);
+  border-radius: 7px;
+  color: #fff;
+}
+.bayan :checked + .b-title::after {
+  content: "+";
+  transform: rotate(-225deg);
+}
+.bayan :checked ~ .b-content {
+  display: block;
+}
+.b-content {
+  padding: 7px 10px;
+  overflow: hidden;
+  transition: 1s;
+}
